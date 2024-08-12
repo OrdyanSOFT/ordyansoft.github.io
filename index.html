@@ -71,34 +71,30 @@
 <body>
     <div class="container">
         <h1>Добро Пожаловать на Сайте</h1>
-        <p>NNLauncher v0.0.1</p>
-        <a href="https://ordyansoft.github.io/install.bat" target="_blank" >Скачать Лаунчер</a>
+        <h2>NNLauncher v0.0.1</h2>
+        <a href="https://ordyansoft.github.io/install.bat" target="_blank">Скачать Лаунчер</a>
 
-        <audio id="myAudio" loop autoplay>
+        <audio id="myAudio" loop>
             <source src="music/2.mp3" type="audio/mpeg">
             Ваш браузер не поддерживает элемент аудио.
         </audio>
 
-
-
         <h1>by ---=== { ...::: by R3yZ0L :::... } ===---</h1>
     </div>
-	<button onclick="playAudio()">Play Music</button>
-        <button onclick="pauseAudio()">Pause Music</button>
-        <button onclick="showInfo()">Информация</button>
+    <button onclick="playMusic()">Воспроизвести Музыку</button>
+    <button onclick="showInfo()">Информация</button>
+
     <script>
         var audio = document.getElementById("myAudio");
 
-        function playAudio() {
-            audio.play();
-        }
-
-        function pauseAudio() {
-            audio.pause();
+        function playMusic() {
+            audio.play().catch(function(error) {
+                console.log('Не удалось воспроизвести музыку:', error);
+            });
         }
 
         function showInfo() {
-            alert("Made in Armenia , https://t.me/r34_43yz0l");
+            alert("Made in Armenia, https://t.me/r34_43yz0l");
         }
     </script>
 </body>
