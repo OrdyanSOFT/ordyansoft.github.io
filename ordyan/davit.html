@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="icon" type="image/x-icon" href="/images/internet.ico">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77);
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: #00d8ff;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .info {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .clock {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nginx Server</h1>
+
+    <div class="info">
+        <!-- PHP код для отображения информации о серверной ОС -->
+        <?php
+        echo "Server OS: " . PHP_OS;
+        ?>
+    </div>
+
+    <div class="clock" id="clock">Loading time...</div>
+
+    <a href="https://t.me/r34_43yz0l" target="_blank">Author</a>
+    <a href="//10.20.20.153:1990" target="_blank">Go To WordPress Page</a>
+    <a href="test.html">Go to Test Page</a>
+    <a href="//10.20.20.153:500" target="_blank">Go To Django Page</a>
+    <a href="https://www.network.am/" target="_blank">
+        <img src="https://www.network.am/images/nk/Networkam7.gif" width="468" height="60" border="0" alt="www.Network.am - Download Portal">
+    </a>
+
+    <script>
+        // Скрипт для отображения часов
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            clockElement.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000); // Обновлять каждую секунду
+        updateClock(); // Обновить сразу после загрузки страницы
+    </script>
+
+</body>
+</html>
+
